@@ -1,43 +1,80 @@
-# Astro Starter Kit: Minimal
+# HIPRO - One Stop Creative Solution Company
 
-```sh
-npm create astro@latest -- --template minimal
+HIPRO is a creative production and documentary solution platform designed to turn complexity into clarity with engaging content.
+
+## 🚀 VPS Installation (Recommended: Docker)
+
+The easiest way to deploy HIPRO on your VPS is using Docker.
+
+### 1. Prerequisites
+Ensure you have Docker and Docker Compose installed on your VPS.
+
+### 2. Deployment Steps
+```bash
+# 1. Clone the repository
+git clone git@github.com:rajaklana/hipro.v1.git
+cd hipro.v1
+
+# 2. Build the Docker image
+docker build -t hipro-app .
+
+# 3. Run the container
+# Mapping VPS port 80 to container port 80
+docker run -d --name hipro-container -p 80:80 hipro-app
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Your site should now be live at your VPS IP address or domain.
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠️ Manual Installation (Node.js)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+If you prefer to run it without Docker:
+
+### 1. Prerequisites
+- Node.js (v20 or higher)
+- npm
+
+### 2. Setup
+```bash
+# 1. Clone the repository
+git clone git@github.com:rajaklana/hipro.v1.git
+cd hipro.v1
+
+# 2. Install dependencies
+npm install
+
+# 3. Build for production
+npm run build
+
+# 4. Preview or Serve
+# You can use 'serve' or any static file server to serve the ./dist folder
+npx serve dist
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+## 🎨 UI & Design
+- **Global Scaling**: The UI is scaled by **130%** by default to provide a better viewing experience.
+- **Framework**: Built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
 
 ## 🧞 Commands
+| Command | Action |
+| :--- | :--- |
+| `npm run dev` | Starts local dev server at `localhost:4321` |
+| `npm run build` | Build your production site to `./dist/` |
+| `npm run preview` | Preview your build locally |
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📁 Project Structure
+```text
+/
+├── public/          # Static assets (favicons, etc.)
+├── src/
+│   ├── assets/      # Images and other assets
+│   ├── components/  # Astro components (Hero, Stats, etc.)
+│   ├── layouts/     # Page layouts
+│   ├── styles/      # Global CSS (scaling logic here)
+│   └── pages/       # Main routes
+├── Dockerfile       # Production build configuration
+└── tailwind.config.mjs
+```
