@@ -1,0 +1,37 @@
+---
+---
+<section class="py-24 bg-white/40">
+  <div class="container grid md:grid-cols-2 gap-16 items-center">
+    <div class="flex justify-center">
+      <img 
+        src="/src/assets/images/duo.png" 
+        alt="Creative Duo" 
+        class="w-full max-w-md drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+
+    <div class="space-y-10">
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-black leading-tight text-[#1a1a1a]">
+          Behind Every Brand,<br/>
+          <span class="text-[#2b6cb0]">There's a Human Story.</span>
+        </h2>
+        
+        <div class="space-y-8 text-[#4a5568] font-medium leading-relaxed md:text-base">
+          <p>
+            At <span class="font-black text-black">HIPRO</span>, we see brands as living narratives shaped by real people, passion, and purpose. We go beyond visuals to uncover the human essence behind every identity.
+          </p>
+          <p class="text-[#718096] italic border-l-4 border-[#2b6cb0] pl-6 py-2 text-sm md:text-base">
+            transforming it into meaningful films, designs, and creative experiences that make each story seen, felt, and remembered.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <div class={`w-3.5 h-3.5 rounded-full transition-all duration-300 ${i === 2 ? 'bg-[#2b6cb0] scale-110 shadow-lg' : 'bg-gray-300'}`}></div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

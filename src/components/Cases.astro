@@ -1,0 +1,42 @@
+---
+const cases = [
+  { title: 'Pertamina', desc: 'Workplace to Excelance', img: '/src/assets/images/project-1.png' },
+  { title: 'Bank Jatim', desc: 'Workplace to Excelance', img: '/src/assets/images/project-2.png' },
+  { title: 'Sparkling Surabaya', desc: 'Workplace to Excelance', img: '/src/assets/images/project-1.png' },
+  { title: 'Pesona Indonesia', desc: 'Workplace to Excelance', img: '/src/assets/images/project-2.png' },
+  { title: 'Injourney', desc: 'The Gateway East Java', img: '/src/assets/images/project-1.png' },
+  { title: 'Petrokimi Gresik', desc: 'Workplace to Excelance', img: '/src/assets/images/project-2.png' },
+];
+---
+<section class="py-24">
+  <div class="container space-y-16">
+    <div class="space-y-4">
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight">Everyone Has a Story<br/>to be Told</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-14">
+      {cases.map((item) => (
+        <div class="group cursor-pointer">
+          <div class="aspect-video bg-[#1a365d] rounded-3xl overflow-hidden mb-6 relative border-[6px] border-transparent group-hover:border-red-600 transition-all duration-300">
+            <img 
+              src={item.img} 
+              alt={item.title} 
+              class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+            />
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+               <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600 fill-current" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+               </div>
+            </div>
+          </div>
+          <div class="text-center space-y-1">
+            <h3 class="font-black text-xl tracking-tight text-[#1a1a1a]">{item.title}</h3>
+            <p class="text-[10px] text-gray-400 font-black uppercase tracking-[0.2em]">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
